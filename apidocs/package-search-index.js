@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.openwms.common.comm.osip"},{"l":"org.openwms.common.comm.osip.err"},{"l":"org.openwms.common.comm.osip.locu"},{"l":"org.openwms.common.comm.osip.req"},{"l":"org.openwms.common.comm.osip.res"},{"l":"org.openwms.common.comm.osip.sysu"},{"l":"org.openwms.common.comm.osip.upd"}];updateSearchResults();
