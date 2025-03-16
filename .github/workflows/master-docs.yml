@@ -67,8 +67,8 @@ jobs:
           -DsurefireArgs=-Dspring.profiles.active=ASYNCHRONOUS,TEST
           -Dargs=-Dspring.profiles.active=ASYNCHRONOUS,TEST
           -Dspring.rabbitmq.host=localhost
-          -Dscmpublish.pubScmUrl=scm:git:https://openwms:$PUSHKEY@github.com/openwms/org.openwms.tms.routing.lib.git
-          -DdeveloperConnectionUrl=scm:git:https://openwms:$PUSHKEY@github.com/openwms/org.openwms.tms.routing.lib.git
+          -Dscmpublish.pubScmUrl=scm:git:https://openwms:$PUSHKEY@github.com/openwms/org.openwms.tms.routing.osip.git
+          -DdeveloperConnectionUrl=scm:git:https://openwms:$PUSHKEY@github.com/openwms/org.openwms.tms.routing.osip.git
           -Dci.buildNumber=$GITHUB_RUN_NUMBER
           -Prelease,coverage -B $MAVEN_OPTS
         env:
