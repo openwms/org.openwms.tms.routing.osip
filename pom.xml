@@ -42,9 +42,10 @@
         <core.units.version>0.7.0</core.units.version>
         <flowable.version>6.7.2</flowable.version>
         <groovy-jsr223.version>3.0.9</groovy-jsr223.version>
-        <process.runtime.version>0.1.0-SNAPSHOT</process.runtime.version>
+        <process.runtime.version>0.1.0</process.runtime.version>
         <schemaspy-maven-plugin.version>5.3.1</schemaspy-maven-plugin.version>
         <spring-cloud-dependencies.version>2024.0.0</spring-cloud-dependencies.version>
+        <tms.routing.lib.version>2.0.0-SNAPSHOT</tms.routing.lib.version>
         <transportation-service.version>2.0.0</transportation-service.version>
     </properties>
 
@@ -106,26 +107,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>full-build</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <classifier>all</classifier>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.asciidoctor</groupId>
-                <artifactId>asciidoctor-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
@@ -213,6 +194,11 @@
             </dependency>
             <dependency>
                 <groupId>org.openwms</groupId>
+                <artifactId>org.openwms.tms.routing.lib</artifactId>
+                <version>${tms.routing.lib.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.openwms</groupId>
                 <artifactId>org.openwms.tms.transportation</artifactId>
                 <version>${transportation-service.version}</version>
                 <classifier>client</classifier>
@@ -252,16 +238,17 @@
             <classifier>client</classifier>
             <!-- Provide -->
         </dependency>
-        <!--dependency>
+        <dependency>
             <groupId>org.openwms</groupId>
             <artifactId>org.openwms.core.test.arch</artifactId>
             <scope>test</scope>
-        </dependency-->
+        </dependency>
         <dependency>
             <groupId>org.openwms</groupId>
             <artifactId>org.openwms.tms.routing.lib</artifactId>
-            <version>2.0.0-SNAPSHOT</version>
+            <!-- Provide -->
         </dependency>
+
         <!-- Spring Dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
